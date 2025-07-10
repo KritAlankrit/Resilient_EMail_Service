@@ -5,6 +5,10 @@ import { emailService } from './src/serviceInstance';
 const app = express();
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('✅ Resilient Email Service is live!');
+});
+
 // POST /send-email
 app.post('/send-email', (req, res) => {
   const { to, subject, body, messageId } = req.body;
