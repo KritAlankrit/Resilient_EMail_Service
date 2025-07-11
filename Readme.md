@@ -24,7 +24,14 @@ npm install
 
 ### 2. Run Tests
 
-npm run test
+npx jest
+
+## Cloud deployed version of API
+
+https://resilient-email-service-fkts.onrender.com/
+
+### Note
+This live deployed version of API endpoint is automatically spun down after 15 minutes of inactivity. This is a standard behavior for Render’s free web services to conserve resources.
 
 ## Assumptions
 
