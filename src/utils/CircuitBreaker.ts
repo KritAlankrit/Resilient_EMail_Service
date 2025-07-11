@@ -1,4 +1,3 @@
-// src/utils/CircuitBreaker.ts
 export class CircuitBreaker {
   private failureCount = 0;
   private lastFailureTime = 0;

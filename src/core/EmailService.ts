@@ -1,4 +1,3 @@
-// src/core/EmailService.ts
 import { MockProvider1 } from "../providers/MockProvider1";
 import { MockProvider2 } from "../providers/MockProvider2";
 import { CircuitBreaker } from "../utils/CircuitBreaker";
@@ -25,7 +24,7 @@ export class EmailService {
     private queue: EmailRequest[] = [];
     private isProcessing = false;
 
-    constructor(private retryDelay = 500) { // default is 100ms
+    constructor(private retryDelay = 500) {
         setInterval(() => this.processQueue(), 500);
     }
 

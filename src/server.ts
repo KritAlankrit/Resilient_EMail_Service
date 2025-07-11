@@ -1,4 +1,3 @@
-// src/server.ts
 import express from "express";
 import { EmailService } from "./core/EmailService";
 
@@ -25,5 +24,5 @@ app.get("/status/:id", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`🚀 Server running at http://localhost:${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });

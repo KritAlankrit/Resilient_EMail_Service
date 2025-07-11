@@ -4,7 +4,6 @@ describe("EmailService", () => {
   let emailService: EmailService;
 
   beforeEach(() => {
-    // Use shorter retry delay for faster tests
     emailService = new EmailService(50);
   });
 
@@ -28,7 +27,6 @@ describe("EmailService", () => {
       messageId: "msg-2"
     });
 
-    // Wait for the message to be processed
     await new Promise((r) => setTimeout(r, 6000));
 
     const result2 = emailService.enqueue({
@@ -39,7 +37,7 @@ describe("EmailService", () => {
     });
 
     expect(result2.status).toBe("duplicate");
-  }, 10000); // 10 seconds
+  }, 10000);
 
   test("should apply rate limiting", () => {
     const results = [];
